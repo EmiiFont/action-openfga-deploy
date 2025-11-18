@@ -40,6 +40,10 @@ inputs:
   format:
     description: Authorization model input format. Can be "fga" or "json", defaults to auto-detecting from the file extension
     required: false
+  fga_cli_version:
+    description: 'Version tag of openfga/cli to use'
+    required: false
+    default: latest
 
 outputs:
   authorization_model_id:
@@ -53,6 +57,7 @@ runs:
       uses: jaxxstorm/action-install-gh-release@6096f2a2bbfee498ced520b6922ac2c06e990ed2
       with:
         repo: openfga/cli
+        tag: ${{ inputs.fga_cli_version }}
         cache: enable
 
     - name: Install JQ
