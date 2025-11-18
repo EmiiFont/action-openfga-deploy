@@ -10,12 +10,12 @@ This action can be used to deploy your authorization model to an OpenFGA store.
 |--------------------|-------------------|------------------------------------------------------------------------------------------------------------------------|
 | `api-url`          | Required          | The OpenFGA server to import the Authorization Model into                                                              |
 | `store-id`         | Required          | The store to import the Authorization Model into                                                                       |
-| `api-token`        | Optional          | The shared secret to use for the request                                                                               |
-| `api-audience`     | Optional          | If using client credentials auth, you can specify an API audience to use for the request                               |
-| `api-scopes`       | Optional          | If using client credentials auth, you can specify API scopes to use for the request                                    |
-| `api-token-issuer` | Optional          | If using client credentials auth, you can specify the token issuer to use for the request                              |
-| `client-id`        | Optional          | If using client credentials auth, you can specify the client ID to use for the request                                 |
-| `client-secret`    | Optional          | If using client credentials auth, you can specify the client secret to use for the request                             |
+| `api-token`        | Optional          | When using pre-shared key auth, specify the shared secret to use for the request                                       |
+| `api-token-issuer` | Optional          | When using client credentials auth, specify the token issuer to use for the request                                    |
+| `client-id`        | Optional          | When using client credentials auth, specify the client ID to use for the request                                       |
+| `client-secret`    | Optional          | When using client credentials auth, specify the client secret to use for the request                                   |
+| `api-audience`     | Optional          | When using client credentials auth, specify the API audience to use for the request                                    |
+| `api-scopes`       | Optional          | When using client credentials auth, specify the API scopes to use for the request                                      |
 | `model-file-path`  | Optional          | The file path of the model to be imported                                                                              |
 | `model`            | Optional          | The model to be imported if no file path is provided. Characters should be escaped. Used if `model-file-path` is empty |
 | `format`           | Optional          | Authorization model input format. Can be "fga" or "json", defaults to auto-detecting from the file extension           |
