@@ -6,14 +6,20 @@ This action can be used to deploy your authorization model to an OpenFGA store.
 
 ## Parameter
 
-| Parameter         | Required/Optional | Description                                                                                                  |
-|-------------------|-------------------|--------------------------------------------------------------------------------------------------------------|
-| `api-url`         | Required          | The URL to your OpenFGA server                                                                               |
-| `api-token`       | Required          | The token used to when preshared keys are used to authenticate the OpenFGA server                            |
-| `store-id`        | Required          | The store to which the model should be deployed                                                              |
-| `model-file-path` | Optional          | The path to your model file relative to the root of your project                                             |
-| `model`           | Optional          | The model value if file is not used, Ensure it is character escaped.                                         |
-| `format`          | Optional          | Authorization model input format. Can be "fga" or "json", defaults to auto-detecting from the file extension |
+| Parameter          | Required/Optional | Description                                                                                                            |
+|--------------------|-------------------|------------------------------------------------------------------------------------------------------------------------|
+| `api-url`          | Required          | The OpenFGA server to import the Authorization Model into                                                              |
+| `store-id`         | Required          | The store to import the Authorization Model into                                                                       |
+| `api-token`        | Optional          | When using pre-shared key auth, specify the shared secret to use for the request                                       |
+| `api-token-issuer` | Optional          | When using client credentials auth, specify the token issuer to use for the request                                    |
+| `client-id`        | Optional          | When using client credentials auth, specify the client ID to use for the request                                       |
+| `client-secret`    | Optional          | When using client credentials auth, specify the client secret to use for the request                                   |
+| `api-audience`     | Optional          | When using client credentials auth, specify the API audience to use for the request                                    |
+| `api-scopes`       | Optional          | When using client credentials auth, specify the API scopes to use for the request                                      |
+| `model-file-path`  | Optional          | The file path of the model to be imported                                                                              |
+| `model`            | Optional          | The model to be imported if no file path is provided. Characters should be escaped. Used if `model-file-path` is empty |
+| `format`           | Optional          | Authorization model input format. Can be "fga" or "json", defaults to auto-detecting from the file extension           |
+| `fga_cli_version`  | Optional          | Version tag of openfga/cli to use (default "latest")                                                                   |
 
 ## Outputs
 
