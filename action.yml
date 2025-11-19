@@ -5,29 +5,29 @@ branding:
   color: green
 
 inputs:
-  store-id:
-    description: The store to import the Authorization Model into
-    required: true
-  api-audience:
-    description: If you use pre-shared key authentication, you can specify an API audience to use for the request
-    required: false
-  api-scopes:
-    description: If you use pre-shared key authentication, you can specify API scopes to use for the request
-    required: false
-  api-token:
-    description: The shared secret to use for the request
-    required: false
-  api-token-issuer:
-    description: If you use pre-shared key authentication, you can specify the token issuer to use for the request
-    required: false
   api-url:
     description: The OpenFGA server to import the Authorization Model into
     required: true
+  store-id:
+    description: The store to import the Authorization Model into
+    required: true
+  api-token:
+    description: When using pre-shared key auth, specify the shared secret to use for the request
+    required: false
+  api-token-issuer:
+    description: When using client credentials auth, specify the token issuer to use for the request
+    required: false
   client-id:
-    description: If you use pre-shared key authentication, you can specify the client ID to use for the request
+    description: When using client credentials auth, specify the client ID to use for the request
     required: false
   client-secret:
-    description: If you use pre-shared key authentication, you can specify the client secret to use for the request
+    description: When using client credentials auth, specify the client secret to use for the request
+    required: false
+  api-audience:
+    description: When using client credentials auth, specify an API audience to use for the request
+    required: false
+  api-scopes:
+    description: When using client credentials auth, specify the API scopes to use for the request
     required: false
   model:
     description: The model to be imported into. The characters should be escaped. The value from here will be used if model-file-path is empty
