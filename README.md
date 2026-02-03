@@ -20,6 +20,7 @@ This action can be used to deploy your authorization model to an OpenFGA store.
 | `model`            | Optional          | The model to be imported if no file path is provided. Characters should be escaped. Used if `model-file-path` is empty |
 | `format`           | Optional          | Authorization model input format. Can be "fga" or "json", defaults to auto-detecting from the file extension           |
 | `fga_cli_version`  | Optional          | Version tag of openfga/cli to use (default "latest")                                                                   |
+| `debug`            | Optional          | Enable debug logging in OpenFGA CLI (default "false")                                                                 |
 
 ## Outputs
 
